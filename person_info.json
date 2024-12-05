@@ -1,0 +1,28 @@
+{
+  "tokuda": {
+    "email": "johndoe@example.com",
+    "phone": "123456789",
+    "address": "123 Main St"
+  },
+  "elon musk": {
+    "email": "musk@example.com",
+    "phone": "987654321",
+    "address": "456 Maple Ave"
+  },
+  "donal trumb": {
+    "email": "donal@example.com",
+    "phone": "987654321",
+    "address": "456 Maple Ave"
+  },
+
+  "joker": {
+    "email": "donal@example.com",
+    "phone": "987654321",
+    "address": "456 Maple Ave"
+  },
+  "hao": {
+    "email": "donal@example.com",
+    "phone": "987654321",
+    "address": "456 Maple Ave"
+  }
+}

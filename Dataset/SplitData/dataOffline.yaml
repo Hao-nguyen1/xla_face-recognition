@@ -1,0 +1,7 @@
+path: C:\Users\AD\OneDrive\Máy tính\xla_live\Dataset\SplitData
+train: train/images
+val: val/images
+test: test/images
+
+nc: 2
+names: ['fake', 'real']

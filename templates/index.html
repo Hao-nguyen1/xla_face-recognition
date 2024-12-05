@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xác thực Khuôn mặt</title>
+</head>
+<body>
+    <h1>Xác thực Khuôn mặt</h1>
+    <form id="upload-form" enctype="multipart/form-data">
+        <input type="file" id="video" name="video" accept="video/*" required>
+        <button type="button" onclick="verifyVideo()">Xác thực</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function verifyVideo() {
+            const formData = new FormData();
+            const videoFile = document.getElementById('video').files[0];
+            formData.append('video', videoFile);
+
+            fetch('/verify_video', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const result = document.getElementById('result');
+                if (data.status === "success") {
+                    result.textContent = `Xác thực thành công: ${data.name}`;
+                } else {
+                    result.textContent = "Không tìm thấy khuôn mặt phù hợp.";
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
